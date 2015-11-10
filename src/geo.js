@@ -1,6 +1,6 @@
 var parseDms = function(input) {
 	var result = [null, null];
-	var re = /(\d+(?:\.\d+)?)[°º:d\s]?\s?(?:(\d+(?:\.\d+)?)['’‘′:]\s?(?:(\d{1,2}(?:\.\d+)?)(?:"|″|’’|'')?)?)?\s?([NSEW])?/gi;
+	var re = /(\d+(?:\.\d+)?)[°]?\s?(?:(\d+(?:\.\d+)?)[´`'ʹʻʼ′]\s?(?:(\d{1,2}(?:\.\d+)?)(?:″|ʺ|"|´´|``|''|ʹʹ|ʻʻ|ʼʼ|′′)?)?)?\s?([NSEW])?/gi;
 	var match = re.exec(input);
 	while (match != null) {
 		var d = parseFloat(match[1]);
