@@ -13,6 +13,7 @@ test('parseDms', function(t) {
     almostEqual(geo.parseDms("51°28'38''N -101°16'56''E"), [-101.2822, 51.4772])
     almostEqual(geo.parseDms("51° N 101° W"), [-101.0000, 51.0000])
     almostEqual(geo.parseDms("51° N"), [null, 51.0000])
+    almostEqual(geo.parseDms("12° N 109° 58’ 37” W"), [-109.9769, 12.0000])
 
     t.end();
 })

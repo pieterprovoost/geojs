@@ -5,7 +5,7 @@ var sign = function(x) {
 
 var parseDms = function(input) {
 	var result = [null, null];
-	var re = /(-?\d+(?:\.\d+)?)\s*°\s*(?:(\d+(?:\.\d+)?)\s*[´`'ʹʻʼ′]\s*(?:(\d+(?:\.\d+)?)\s*(?:″|ʺ|"|´´|``|''|ʹʹ|ʻʻ|ʼʼ|′′)?)?)?\s*([NSEW])?/gi;
+	var re = /(-?\d+(?:\.\d+)?)\s*°\s*(?:(\d+(?:\.\d+)?)\s*[´`'ʹʻʼ′’]\s*(?:(\d+(?:\.\d+)?)\s*(?:″|ʺ|"|”|´´|``|''|ʹʹ|ʻʻ|ʼʼ|′′|’’)?)?)?\s*([NSEW])?/gi;
 	var match = re.exec(input);
 	while (match != null) {
 		var d = parseFloat(match[1]);
