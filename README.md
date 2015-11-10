@@ -19,6 +19,8 @@ browserify src/geo.js --s geo > geo.js
 ## Functions
 ### parseDms()
 
+Converts degrees, minutes and seconds to decimal longitude and latitude.
+
 ```javascript
 geo.parseDms("51°28'38''N 101°16'56''W")
 geo.parseDms("51°28'38\"N 101°16'56\"W")
