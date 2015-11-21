@@ -22,3 +22,20 @@ test('convexHull', function(t) {
     t.equal(hull.length, 5)
     t.end();
 });
+
+test('distance', function(t) {
+    var almostEqual = fuzzy(t, 1000);
+    var points = [[20, 30], [21, 31]];
+    var d = geo.distance(points);
+    almostEqual([d], [147000]);
+    t.end();
+});
+
+test('midpoint', function(t) {
+    var almostEqual = fuzzy(t, 0.1);
+    var points = [[-179, 10], [-179, 20], [179, 15]];
+    var mid = geo.midpoint(points);
+    almostEqual(mid, [-179.67, 15]);
+    t.end();
+});
+

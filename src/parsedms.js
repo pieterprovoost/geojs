@@ -1,6 +1,4 @@
-var sign = function(x) {
-	return typeof x === 'number' ? x ? x < 0 ? -1 : 1 : x === x ? 0 : NaN : NaN;
-};
+var util = require("./util");
 
 var parseDms = function(input) {
 	var result = [null, null];
@@ -19,7 +17,7 @@ var parseDms = function(input) {
 					dd = dd + s / 3600.0;	
 				} 
 			}
-			dd = sign(d) * dd;
+			dd = util.sign(d) * dd;
 			if (h .toLowerCase() == "n") {
 				result[1] = dd;
 			} else if (h .toLowerCase() == "e") {
