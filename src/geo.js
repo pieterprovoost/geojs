@@ -7,5 +7,6 @@ module.exports = {
 	parseDms: parsedms.parseDms,
 	convexHull: convexhull.convexHull,
 	distance: distance.distance,
+	maxDistance: distance.maxDistance,
 	midpoint: midpoint.midpoint
 };

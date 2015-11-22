@@ -68,6 +68,7 @@ module.exports = {
 	parseDms: parsedms.parseDms,
 	convexHull: convexhull.convexHull,
 	distance: distance.distance,
+	maxDistance: distance.maxDistance,
 	midpoint: midpoint.midpoint
 };
 },{"./convexhull":1,"./distance":2,"./midpoint":4,"./parsedms":5}],4:[function(require,module,exports){
